@@ -13,7 +13,7 @@
     "breadcrumbs.enabled": false,
     "terminal.integrated.tabs.showActiveTerminal": "singleTerminal",
     "terminal.integrated.tabs.enabled": true,
-    "workbench.colorTheme": "theme-ob-light",
+    "workbench.colorTheme": "Visual Studio Dark",
     "files.exclude": {
       "**/.git": true,
       "dist": true,
