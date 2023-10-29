@@ -113,7 +113,7 @@ class BaselineChallenge(FlowSpec):
 
         self.results = []
         for params in self.hyperparam_set:
-            model = NbowModel(vocab_sz=params)  # TODO: instantiate your custom model here!
+            model = NbowModel(vocab_sz=params["vocab_sz"])  # TODO: instantiate your custom model here!
             model.fit(X_train, y_train)
             # TODO: evaluate your custom model in an equivalent way to accuracy_score.
             acc = model.eval_acc(X_val, y_val)
@@ -132,7 +132,7 @@ class BaselineChallenge(FlowSpec):
         self.next(self.aggregate)
 
     @step
-    def aggregate(self):
+    def aggregate(self, inputs):
         self.next(self.end)
 
     @step
